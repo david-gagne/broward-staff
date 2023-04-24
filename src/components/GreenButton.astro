@@ -1,0 +1,21 @@
+---
+const { href, id } = Astro.props;
+---
+
+<a
+  id={id}
+  href={href}
+  class="green-button link is-theme-green white ba br3 b--theme-green pv2 ph3 grow"
+>
+  <slot />
+</a>
+
+<style>
+  .is-theme-green {
+    background-color: var(--theme-green);
+  }
+
+  .b--theme-green {
+    border-color: var(--theme-green);
+  }
+</style>

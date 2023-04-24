@@ -1,0 +1,99 @@
+---
+import GreenButton from "./GreenButton.astro";
+---
+
+<header class="h3 ph3 ph5-l relative z-1">
+  <div class="h3 header-container flex justify-between items-center">
+    <div class="logo-container flex items-center">
+      <a href="/"
+        ><img
+          src="https://webfirm.sirv.com/Broward%20Staff/logo-in-black.svg"
+          alt="Broward Staff mosaic hummingbird logo with black wordmark"
+          width="167"
+        /></a
+      >
+    </div>
+
+    <nav class="main-site-navigation desktop list">
+      <button name="menu" class="bg-transparent bn db dn-m-custom dn-l">
+        <i class="menu-toggler bi bi-list f3 relative"></i>
+      </button>
+
+      <li class="ph3 dn di-m-custom di-l page-link">
+        <a href="/how-it-works/" class="black no-underline">How it works</a>
+      </li>
+      <li class="ph3 dn di-m-custom di-l page-link">
+        <a href="/pricing/" class="black no-underline">Pricing</a>
+      </li>
+      <li class="ph3 dn di-m-custom di-l page-link">
+        <a href="/contact/" class="black no-underline">Contact</a>
+      </li>
+      <li class="pl3 dn di-m-custom di-l">
+        <GreenButton href="/profiles/">Browse Profiles</GreenButton>
+      </li>
+    </nav>
+  </div>
+
+  <div class="mobile-menu w-100 bg-white absolute top-3 left-0 dn">
+    <nav
+      class="main-site-navigation list flex flex-column justify-around h5 items-center pt5"
+    >
+      <li class="pv3 page-link">
+        <a href="/how-it-works/" class="black no-underline">How it works</a>
+      </li>
+      <li class="pv3 page-link">
+        <a href="/pricing/" class="black no-underline">Pricing</a>
+      </li>
+      <li class="pv3 page-link">
+        <a href="/contact/" class="black no-underline">Contact</a>
+      </li>
+      <li class="pv3">
+        <GreenButton href="/profiles/">Browse Profiles</GreenButton>
+      </li>
+    </nav>
+  </div>
+</header>
+
+<style>
+  header {
+    background-color: transparent;
+    border-bottom: 1px solid #ebebeb;
+  }
+
+  .bi-list {
+    /* top: 3px; */
+    right: -5px;
+  }
+
+  .page-link:hover {
+    text-decoration: underline;
+  }
+
+  .mobile-menu {
+    height: calc(100vh - 64px);
+    background-color: var(--theme-yellow);
+  }
+
+  @media screen and (min-width: 730px) {
+    .di-m-custom {
+      display: inline;
+    }
+
+    .dn-m-custom {
+      display: none;
+    }
+  }
+</style>
+
+<script>
+  let menuToggler = document.querySelector(".menu-toggler");
+  let mobileMenu = document.querySelector(".mobile-menu");
+
+  menuToggler.addEventListener("click", function (event) {
+    if (!mobileMenu.classList.contains("dn")) {
+      mobileMenu.classList.add("dn");
+    } else {
+      mobileMenu.classList.remove("dn");
+    }
+  });
+</script>

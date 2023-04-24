@@ -1,0 +1,55 @@
+---
+import SmallCardButton from "./SmallCardButton.astro";
+---
+
+<article class="ba br3 b--light-gray pa3 relative">
+  <div>
+    <div class="flex card-header">
+      <img src="https://placehold.co/90" alt="" class="br2" />
+
+      <div class="ml3">
+        <h1 class="f5 fw5 di">First name, age</h1>
+        <p class="f6 mt2 mb2 gray">Job Title</p>
+        <p class="f6 mt0 mb2 gray">City, State</p>
+        <p class="f6 mt2 mb0 gray">Availability</p>
+      </div>
+    </div>
+
+    <div class="flex card-body pt1">
+      <p class="lh-copy mb0">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, sit sint
+        obcaecati minus iusto nam optio! Aut deleniti quibusdam odio cum
+        reprehenderit sint illo corrupti est esse, accusantium provident! Alias!
+      </p>
+    </div>
+
+    <div class="card-footer absolute bottom-1">
+      <SmallCardButton>See More</SmallCardButton>
+    </div>
+  </div>
+</article>
+
+<style>
+  article {
+    width: 268px;
+    height: 268px;
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
+      rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+  }
+
+  h1 {
+    font-family: "Avenir", sans-serif;
+  }
+
+  .card-body {
+    height: 60px;
+  }
+
+  .card-body > p {
+    height: 75px;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+  }
+</style>

@@ -1,0 +1,132 @@
+---
+import SiteLayout from "../layouts/SiteLayout.astro";
+import FilterButton from "../components/FilterButton.astro";
+import ProfileCard from "../components/ProfileCard.astro";
+---
+
+<SiteLayout>
+  <main class="pb6">
+    <section class="ph3 ph5-l pb4">
+      <div class="flex items-center flex-column">
+        <h1 class="f2 f1-m f1-l lh-title mb1 mt4 pt2 tc">Candidate Profiles</h1>
+
+        <p class="subheadline f6 f5-ns lh-copy mb3 pb1 ph2 tc">
+          Review candidate details, choose your favorites, and only pay when
+          you're ready to make contact.
+        </p>
+      </div>
+    </section>
+
+    <div class="filters pv3">
+      <div class="cf ph2-m ph2-l mw8 center">
+        <div class="fl w-100 w-10-l pa2">
+          <p class="mv2">
+            <i class="bi bi-funnel"></i> Filters
+          </p>
+        </div>
+        <div
+          class="fl w-100 w-90-l pa2 pr0 nowrap overflow-x-scroll overflow-hidden-l pb4 pb0-l filters-buttons"
+        >
+          <div class="di pr3">
+            <FilterButton>
+              <i class="bi bi-person"></i> Job Titles
+            </FilterButton>
+          </div>
+
+          <div class="di pr3">
+            <FilterButton>
+              <i class="bi bi-map"></i> Location
+            </FilterButton>
+          </div>
+
+          <div class="di pr3">
+            <FilterButton>
+              <i class="bi bi-calendar2-check"></i> Availability
+            </FilterButton>
+          </div>
+
+          <div class="di pr3">
+            <FilterButton>
+              <i class="bi bi-currency-dollar"></i> Desired Salary
+            </FilterButton>
+          </div>
+
+          <div class="di pr3">
+            <FilterButton>
+              <i class="bi bi-ladder"></i> Experience Level
+            </FilterButton>
+          </div>
+
+          <div class="di pr3">
+            <FilterButton>
+              <i class="bi bi-mortarboard"></i> Education Level
+            </FilterButton>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section id="profiles" class="ph3 pv4 mt4 flex justify-center">
+      <div
+        class="w-100 flex flex-column items-center justify-center flex-row-m flex-row-l flex-wrap profile-cards"
+      >
+        <ProfileCard />
+        <ProfileCard />
+        <ProfileCard />
+        <ProfileCard />
+
+        <ProfileCard />
+        <ProfileCard />
+        <ProfileCard />
+      </div>
+    </section>
+  </main>
+</SiteLayout>
+
+<style is:inline>
+  html {
+    background-color: white;
+  }
+
+  header,
+  .mobile-menu {
+    background-color: white;
+  }
+
+  .filters {
+    border-top: 1px solid #ebebeb;
+    border-bottom: 1px solid #ebebeb;
+  }
+
+  .subheadline {
+    max-width: 400px;
+  }
+
+  .profile-cards {
+    row-gap: 2em;
+    column-gap: 2em;
+    max-width: 916px;
+  }
+
+  @media screen and (min-width: 600px) {
+    .profile-cards {
+      justify-content: flex-start;
+      max-width: 568px;
+    }
+  }
+
+  @media screen and (min-width: 900px) {
+    .profile-cards {
+      justify-content: flex-start;
+      max-width: 868px;
+    }
+  }
+
+  @media screen and (min-width: 1200px) {
+    .profile-cards {
+      row-gap: 2em;
+      column-gap: 2em;
+      max-width: 1168px;
+    }
+  }
+</style>

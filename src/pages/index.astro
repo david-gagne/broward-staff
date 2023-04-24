@@ -1,0 +1,139 @@
+---
+import SiteLayout from "../layouts/SiteLayout.astro";
+import GreenButton from "../components/GreenButton.astro";
+---
+
+<SiteLayout>
+  <main class="ph3 ph5-l pt0 pv6-l pb5">
+    <section class="flex justify-center tc">
+      <div class="section-content flex items-center flex-column">
+        <h1 class="headline f2 f1-m f1-l lh-title mb1 mt4 pt2">
+          Never be short-staffed again
+        </h1>
+
+        <p class="subheadline f6 f5-ns lh-copy mb3 pb1 ph2">
+          Browse the profiles of work-ready servers, hosts, and other staff for
+          your restaurant and cut down on hiring costs with Broward Staff.
+        </p>
+
+        <GreenButton id="ctaButton" href="/profiles/">Get Started</GreenButton>
+      </div>
+    </section>
+
+    <div class="center ph3-ns mt4 pt3 mt6-l pt2-l f6 mw8">
+      <div class="cf">
+        <div class="benefit fl w-100 w-third-m w-third-l pa2 tc">
+          <img
+            src="https://webfirm.sirv.com/Broward%20Staff/benefit_one-icon.svg"
+            alt="Outline illustration icon of three people"
+            width="156"
+          />
+
+          <h2 class="f4">Eliminate guesswork</h2>
+
+          <p class="lh-copy measure-narrow center">
+            See a pool of candidates who are actively seeking employment.
+          </p>
+        </div>
+
+        <div
+          class="benefit fl w-100 w-third-m w-third-l pa2 tc pv3 pv2-m pv2-l"
+        >
+          <img
+            src="https://webfirm.sirv.com/Broward%20Staff/clock-icon.svg"
+            alt="A clock icon."
+            width="65"
+          />
+
+          <h2 class="f4">Save time</h2>
+
+          <p class="lh-copy measure-narrow center">
+            Review relevant candidate qualifications <i>before</i> making contact.
+          </p>
+        </div>
+
+        <div class="benefit fl w-100 w-third-m w-third-l pa2 tc">
+          <img
+            src="https://webfirm.sirv.com/Broward%20Staff/piggy-bank-icon.svg"
+            alt="A piggy bank icon"
+            width="65"
+          />
+
+          <h2 class="f4">Save money</h2>
+
+          <p class="lh-copy measure-narrow center">
+            Only pay when you want to contact the most promising candidates.
+          </p>
+        </div>
+      </div>
+    </div>
+  </main>
+</SiteLayout>
+
+<style is:inline>
+  html {
+    background-color: var(--theme-yellow);
+  }
+
+  main {
+    background-image: url("https://webfirm.sirv.com/Broward%20Staff/white-oval.svg");
+    background-repeat: no-repeat;
+    background-position: 5em;
+    background-size: cover;
+  }
+
+  @media screen and (min-width: 480px) {
+    main {
+      background-image: url("https://webfirm.sirv.com/Broward%20Staff/white-oval.svg");
+      background-repeat: no-repeat;
+      background-position: 12em;
+    }
+  }
+
+  @media screen and (min-width: 980px) {
+    main {
+      background-image: url("https://webfirm.sirv.com/Broward%20Staff/white-oval.svg");
+      background-repeat: no-repeat;
+      background-position: 28em;
+    }
+  }
+
+  @media screen and (min-width: 1280px) {
+    main {
+      background-image: url("https://webfirm.sirv.com/Broward%20Staff/white-oval.svg");
+      background-repeat: no-repeat;
+      background-position: 40em;
+    }
+  }
+
+  @media screen and (min-width: 1600px) {
+    main {
+      background-image: url("https://webfirm.sirv.com/Broward%20Staff/white-oval.svg");
+      background-repeat: no-repeat;
+      background-position: 58em;
+    }
+  }
+
+  #ctaButton {
+    font-weight: 700;
+    font-size: 20px;
+    color: white;
+    width: 200px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .headline {
+    max-width: 410px;
+  }
+
+  .subheadline {
+    max-width: 360px;
+  }
+
+  .benefit > p {
+    max-width: 250px;
+  }
+</style>
