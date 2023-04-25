@@ -4,20 +4,35 @@ import GreenButton from "../components/GreenButton.astro";
 ---
 
 <SiteLayout>
-  <div class="pt4 flex justify-start items-center ph3 ph5-l">
-    <div>
-      <h1 class="f1 mv0">404</h1>
-      <h2 class="f2 mv0">Oops!</h2>
-      <h2 class="f2 mv0">Page Not Found</h2>
+  <main class="flex items-center justify-center">
+    <section class="ph3 ph5-l w-90 h-90 pv5 flex items-center">
+      <div class="mw9 center ph3-m ph3-l w-100">
+        <div class="cf ph2-m ph2-l">
+          <div class="fl w-100 w-50-l pb4 pb0-l">
+            <h1 class="f-headline lh-solid mv0">404</h1>
+            <h2 class="f1 mv4">Page not found</h2>
 
-      <p class="lh-copy">
-        We couldn't find the page you requested. But we can still help you find
-        the right candidate for your business.
-      </p>
+            <p class="lh-copy mb4">
+              Although we couldn't find the page you requested, we can still
+              help you find your next hire.
+            </p>
 
-      <GreenButton>Browse Candidates</GreenButton>
-    </div>
-  </div>
+            <GreenButton id="ctaButton" href="/profiles/">
+              Browse profiles
+            </GreenButton>
+          </div>
+
+          <div class="fl w-100 w-50-l pt5 pt0-l">
+            <img
+              src="https://webfirm.sirv.com/Broward%20Staff/404.svg"
+              alt=""
+              width="450"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
 </SiteLayout>
 
 <style is:inline>
@@ -28,5 +43,26 @@ import GreenButton from "../components/GreenButton.astro";
   header,
   .mobile-menu {
     background-color: white;
+  }
+
+  h1 {
+    font-family: "Work Sans", sans-serif;
+    -webkit-text-stroke: 3px black;
+    color: transparent;
+  }
+
+  #ctaButton {
+    font-weight: 700;
+    font-size: 20px;
+    color: white;
+    width: 200px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  p {
+    max-width: 380px;
   }
 </style>

@@ -1,7 +1,6 @@
 ---
 import SiteLayout from "../layouts/SiteLayout.astro";
-import FilterButton from "../components/FilterButton.astro";
-import ProfileCard from "../components/ProfileCard.astro";
+import GreenButton from "../components/GreenButton.astro";
 ---
 
 <SiteLayout>
@@ -19,7 +18,7 @@ import ProfileCard from "../components/ProfileCard.astro";
     <section id="steps-section" class="ph3 ph5-l pt5 pb4">
       <div class="steps flex items-center flex-column flex-row-l mw8 center">
         <div class="w-100 step tc">
-          <h2 class="step-number f-subheadline mv0 white">1</h2>
+          <h2 class="step-number f-subheadline mv0">1</h2>
           <h3 class="step-title">Browse job-seeker profiles</h3>
           <p class="step-description lh-copy center">
             Review as many candidates as you need to make the right hiring
@@ -28,7 +27,7 @@ import ProfileCard from "../components/ProfileCard.astro";
         </div>
 
         <div class="w-100 step tc">
-          <h2 class="step-number f-subheadline mv0 white">2</h2>
+          <h2 class="step-number f-subheadline mv0">2</h2>
           <h3 class="step-title">Pick your favorites</h3>
           <p class="step-description lh-copy center">
             Choose your favorite candidates and add them to your list.
@@ -36,7 +35,7 @@ import ProfileCard from "../components/ProfileCard.astro";
         </div>
 
         <div class="w-100 step tc">
-          <h2 class="step-number f-subheadline mv0 white">3</h2>
+          <h2 class="step-number f-subheadline mv0">3</h2>
           <h3 class="step-title">Contact your top picks</h3>
           <p class="step-description lh-copy center">
             Pay $17 and receive the candidate's full profile, complete with
@@ -45,6 +44,13 @@ import ProfileCard from "../components/ProfileCard.astro";
         </div>
       </div>
     </section>
+    <div class="flex justify-center pv5 mt3">
+      <div>
+        <GreenButton id="ctaButton" href="/profiles/">
+          Start Browsing
+        </GreenButton>
+      </div>
+    </div>
   </main>
 </SiteLayout>
 
@@ -83,6 +89,7 @@ import ProfileCard from "../components/ProfileCard.astro";
   .step-number {
     font-family: "Work Sans", sans-serif;
     -webkit-text-stroke: 3px black;
+    color: transparent;
   }
 
   main {
@@ -92,5 +99,16 @@ import ProfileCard from "../components/ProfileCard.astro";
     background-position-x: 17em, 60em;
     background-position-y: 17em, -10em;
     background-size: 324px;
+  }
+
+  #ctaButton {
+    font-weight: 700;
+    font-size: 20px;
+    color: white;
+    width: 200px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 </style>
