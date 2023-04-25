@@ -3,13 +3,60 @@ import SiteLayout from "../layouts/SiteLayout.astro";
 ---
 
 <SiteLayout>
-  <div class="vh-100 flex justify-center items-center">
-    <h1 class="f1">Pricing</h1>
-  </div>
+  <main class="ph3 ph5-l pb5">
+    <section class="flex justify-center">
+      <div>
+        <h1 class="f2 f1-m f1-l lh-title mb1 mt4 pt2 tc">Pricing</h1>
+
+        <p class="subheadline f6 f5-ns lh-copy mb3 pb1 ph2 tc">
+          Only pay when you find a candidate you like.
+        </p>
+      </div>
+    </section>
+
+    <section class="flex justify-center items-center pv5">
+      <article
+        class="price-card bg-white ba b--black bw2 flex items-center justify-center"
+      >
+        <div class="price-card--inner tc pv4 flex items-center flex-column">
+          <h2 class="mv0">$17/Profile</h2>
+          <p class="lh-copy price-summary">
+            Browse as many candidate profiles as you want and only pay to see
+            their contact details
+          </p>
+        </div>
+      </article>
+    </section>
+  </main>
 </SiteLayout>
 
 <style>
   html {
     background-color: var(--theme-yellow);
+  }
+
+  .subheadline {
+    max-width: 360px;
+  }
+
+  main {
+    min-height: 80vh;
+  }
+
+  article {
+    width: 268px;
+    height: 280px;
+    border-radius: 1.5em;
+  }
+
+  .price-card--inner {
+    background-color: var(--theme-red);
+    width: 226px;
+    height: 236px;
+    border-radius: 1.2em;
+  }
+
+  .price-summary {
+    width: 180px;
   }
 </style>
