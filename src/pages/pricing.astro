@@ -1,5 +1,6 @@
 ---
 import SiteLayout from "../layouts/SiteLayout.astro";
+import GreenButton from "../components/GreenButton.astro";
 ---
 
 <SiteLayout>
@@ -14,23 +15,28 @@ import SiteLayout from "../layouts/SiteLayout.astro";
       </div>
     </section>
 
-    <section class="flex justify-center items-center pv5">
+    <section class="flex flex-column justify-center items-center pv5">
       <article
-        class="price-card bg-white ba b--black bw2 flex items-center justify-center"
+        class="price-card bg-white ba b--black bw2 flex items-center justify-center mb4"
       >
         <div class="price-card--inner tc pv4 flex items-center flex-column">
           <h2 class="mv0">$17/Profile</h2>
-          <p class="lh-copy price-summary">
+          <p class="lh-copy price-summary f6 ph2">
             Browse as many candidate profiles as you want and only pay to see
             their contact details
           </p>
         </div>
       </article>
+      <div>
+        <GreenButton id="ctaButton" href="/profiles/">
+          Browse Profiles
+        </GreenButton>
+      </div>
     </section>
   </main>
 </SiteLayout>
 
-<style>
+<style is:inline>
   html {
     background-color: var(--theme-yellow);
   }
@@ -44,19 +50,30 @@ import SiteLayout from "../layouts/SiteLayout.astro";
   }
 
   article {
-    width: 268px;
-    height: 280px;
+    width: 236px;
+    height: 240px;
     border-radius: 1.5em;
   }
 
   .price-card--inner {
     background-color: var(--theme-red);
-    width: 226px;
-    height: 236px;
+    width: 196px;
+    height: 200px;
     border-radius: 1.2em;
   }
 
   .price-summary {
     width: 180px;
+  }
+
+  #ctaButton {
+    font-weight: 700;
+    font-size: 20px;
+    color: white;
+    width: 236px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 </style>
