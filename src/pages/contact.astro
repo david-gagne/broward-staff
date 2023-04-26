@@ -3,9 +3,62 @@ import SiteLayout from "../layouts/SiteLayout.astro";
 ---
 
 <SiteLayout>
-  <div class="vh-100 flex justify-center items-center">
-    <h1 class="f1">Contact</h1>
-  </div>
+  <main class="ph3 ph5-l pb5">
+    <section class="flex justify-center">
+      <div>
+        <h1 class="f2 f1-m f1-l lh-title mb1 mt4 pt2 tc">Contact</h1>
+
+        <p class="subheadline f6 f5-ns lh-copy mb3 pb1 ph2 tc">
+          We're South Florida locals and we'd love to talk to you!
+        </p>
+      </div>
+    </section>
+
+    <section id="contactInfo" class="mt4">
+      <div class="mw6 mw8-l center ph3-l">
+        <div class="cf">
+          <div class="fl w-100 w-50-l pr2-l pb2 pb0-l tc tl-l">
+            <h2 class="f5 ttu">Support</h2>
+            <a class="black link f3 fw8" href="mailto:help@browardstaff.com"
+              >help@browardstaff.com</a
+            >
+          </div>
+          <div class="fl w-100 w-50-l pl2-l pt2 pt0-l mt3 mt0-l tc tl-l">
+            <h2 class="f5 ttu">For Job-Seekers</h2>
+            <a class="black link f3 fw8" href="mailto:js@browardstaff.com"
+              >js@browardstaff.com</a
+            >
+            <p class="lh-copy">
+              If you're looking for a job and would like to have your profile
+              featured on Broward Staff, please send <span
+                class="pointer underline fw5">these items</span
+              > to the email above.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="mw6 mw8-l center ph3-l pt3 mt4 mt0-l">
+        <div class="cf">
+          <div class="fl w-100 w-50-l pr2-l pb2 pb0-l tc tl-l">
+            <h2 class="f5 ttu">General Inquiries</h2>
+            <a class="black link f3 fw8" href="mailto:info@browardstaff.com"
+              >info@browardstaff.com</a
+            >
+          </div>
+          <div class="fl w-100 w-50-l pl2-l pt2 pt0-l mt3 mt0-l tc tl-l">
+            <h2 class="f5 ttu">About us</h2>
+            <h3 class="f4">Made by Taylor & David</h3>
+            <p class="lh-copy">
+              Inspired by reverse job boards found the tech industry, we started
+              Broward Staff to match people needing jobs with local businesses
+              who are hiring.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
 </SiteLayout>
 
 <style is:inline>
